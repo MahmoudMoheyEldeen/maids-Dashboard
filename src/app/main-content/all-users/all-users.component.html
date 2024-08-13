@@ -1,6 +1,6 @@
 <div class="home">
   <div class="row dashboard-title d-flex justify-content-center my-5">
-    <div class="col-9  d-flex justify-content-center">
+    <div class="col-11  d-flex justify-content-center">
       <h2>Dashboard For Users</h2>
     </div>
   </div>
@@ -68,7 +68,9 @@
 
 
   <div class="row all-user-table">
-    <p-table [value]="users" dataKey="name" [tableStyle]="{ 'min-width': '60rem' }">
+    <p-table [value]=" users" #dt dataKey="id" [rows]="6" [showCurrentPageReport]="true" [rowsPerPageOptions]="[6]"
+      [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+      [tableStyle]="{ 'min-width': '50rem' }">
       <ng-template pTemplate="header">
         <tr>
           <th>ID</th>
