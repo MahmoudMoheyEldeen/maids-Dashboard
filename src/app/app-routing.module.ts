@@ -4,14 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
     redirectTo: 'maids-Dashboard',
+    pathMatch: 'full',
   },
 
   {
-    path: 'maids-Dashboard',
+    path: '',
     loadChildren: () =>
-      import('./main-content/main-content.module').then(
+      import('../app/main-content/main-content.module').then(
         (m) => m.MainContentModule
       ),
   },
