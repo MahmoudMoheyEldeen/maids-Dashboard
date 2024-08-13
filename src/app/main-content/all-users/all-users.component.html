@@ -6,16 +6,16 @@
           <div class="  col-md-9">
             <div class="card text-center">
               <div class="card-header">
-                <h4>ID : {{users[users.length-1].id}}</h4>
+                <!-- <h4>ID : {{users[users.length-1].id}}</h4> -->
               </div>
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-3">
-                    <img [src]="users[users.length-1].avatar" alt="">
+                    <!-- <img [src]="users[users.length-1].avatar" alt=""> -->
                   </div>
                   <div class="col-md-9 d-flex flex-column justify-content-center align-items-center flex-unwrap">
-                    <h5 class="card-title">{{users[users.length-1].first_name}} {{users[users.length-1].last_name}}</h5>
-                    <p class="card-text">{{users[users.length-1].email}}</p>
+                    <!-- <h5 class="card-title">{{users[users.length-1].first_name}} {{users[users.length-1].last_name}}</h5> -->
+                    <!-- <p class="card-text">{{users[users.length-1].email}}</p> -->
                     <a href="#" class="btn btn-primary">More Details</a>
                   </div>
                 </div>
@@ -40,7 +40,7 @@
                   <div class="col-md-9 d-flex flex-column justify-content-center align-items-center flex-unwrap">
                     <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
                     <p class="card-text">{{user.email}}</p>
-                    <a href="#" class="btn btn-primary">More Details</a>
+                    <a [routerLink]="['/user-details', user.id]" class="btn btn-primary">More Details</a>
                   </div>
                 </div>
               </div>
