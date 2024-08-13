@@ -40,7 +40,7 @@
                   <div class="col-md-9 d-flex flex-column justify-content-center align-items-center flex-unwrap">
                     <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
                     <p class="card-text">{{user.email}}</p>
-                    <a [routerLink]="['/user-details', user.id]" class="btn btn-primary">More Details</a>
+                    <a [routerLink]="['/user-details' +'/'+ user.id]" class="btn btn-primary">More Details</a>
                   </div>
                 </div>
               </div>
