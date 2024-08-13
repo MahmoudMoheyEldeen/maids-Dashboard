@@ -27,3 +27,26 @@ h2 {
   font-size: 60px;
   color: white;
 }
+
+.home {
+  height: 92vh;
+}
+
+td,
+th {
+  text-align: center !important;
+}
+
+tr {
+  transition: all .18s ease-in-out;
+
+  &:hover {
+    transform: scale(1.008);
+    background-color: #006AA0;
+    cursor: pointer;
+
+    td {
+      color: white;
+    }
+  }
+}
