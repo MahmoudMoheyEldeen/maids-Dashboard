@@ -14,11 +14,7 @@ const routes: Routes = [
     pathMatch: 'full',
     component: AllUsersComponent,
   },
-  {
-    path: 'user-details',
-    pathMatch: 'full',
-    component: UserDetailsComponent,
-  },
+
   {
     path: 'user-details/:id',
     pathMatch: 'full',

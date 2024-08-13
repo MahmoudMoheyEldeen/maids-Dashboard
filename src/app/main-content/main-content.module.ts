@@ -6,6 +6,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { RouterModule } from '@angular/router';
 import { UserServiceService } from '../services/user-service.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TabViewModule } from 'primeng/tabview';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [AllUsersComponent, UserDetailsComponent],
@@ -14,6 +16,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MainContentRoutingModule,
     RouterModule,
     HttpClientModule,
+    TabViewModule,
+    TableModule,
   ],
   providers: [HttpClient, UserServiceService],
 })

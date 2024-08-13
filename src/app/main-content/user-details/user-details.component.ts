@@ -12,7 +12,7 @@ export class UserDetailsComponent implements OnInit {
   constructor(private _allUserServices: UserServiceService) {}
 
   ngOnInit(): void {
-    this.getUserDetails();
+    // this.getUserDetails();
   }
 
   getUserDetails() {
