@@ -4,16 +4,10 @@ import { CommonModule } from '@angular/common';
 import { MainContentRoutingModule } from './main-content-routing.module';
 import { AllUsersComponent } from './all-users/all-users.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
-
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [
-    AllUsersComponent,
-    UserDetailsComponent
-  ],
-  imports: [
-    CommonModule,
-    MainContentRoutingModule
-  ]
+  declarations: [AllUsersComponent, UserDetailsComponent],
+  imports: [CommonModule, MainContentRoutingModule, RouterModule],
 })
-export class MainContentModule { }
+export class MainContentModule {}
