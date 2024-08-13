@@ -19,6 +19,11 @@ const routes: Routes = [
     pathMatch: 'full',
     component: UserDetailsComponent,
   },
+  {
+    path: 'user-details/:id',
+    pathMatch: 'full',
+    component: UserDetailsComponent,
+  },
 ];
 
 @NgModule({
