@@ -1,3 +1,36 @@
-<p>all users work</p>
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner d-flex ">
+    <div class="carousel-item active ">
+      <div class="d-flex justify-content-center">
+        <div class=" bg-success col-md-9">
+          <p>{{users[users.length-1].id}}</p>
+          <p>{{users[users.length-1].first_name}}</p>
+          <p> {{users[users.length-1].last_name}}</p>
+          <p>{{users[users.length-1].email}}</p>
+        </div>
+      </div>
 
-<button routerLink="/user-details">Go To User Details</button>
+    </div>
+    <div *ngFor="let user of users" class="carousel-item">
+      <div class="d-flex justify-content-center">
+        <div class=" bg-success col-md-9">
+          <p>{{user.id}}</p>
+          <p>{{user.first_name}}</p>
+          <p> {{user.last_name}}</p>
+          <p>{{user.email}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!-- <button routerLink="/user-details">Go To User Details</button> -->
