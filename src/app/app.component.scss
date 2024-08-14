@@ -2,4 +2,9 @@
   background-image: url('../assets/images/background.jpg');
   background-position: center center;
   background-size: cover;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92vh;
 }

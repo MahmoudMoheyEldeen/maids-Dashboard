@@ -1,0 +1,9 @@
+<div class="container loading-page">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-6 d-flex justify-content-center align-items-center">
+      <div *ngIf="loadingService.loading | async">
+        <span class="loader"></span>
+      </div>
+    </div>
+  </div>
+</div>
