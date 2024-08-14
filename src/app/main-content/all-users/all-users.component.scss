@@ -20,12 +20,15 @@
 
 }
 
-h2 {
-  font-family: "Permanent Marker", cursive;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 60px;
-  color: white;
+.dashboard-title {
+  p {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    color: white;
+  }
+
 }
 
 .home {
@@ -45,5 +48,24 @@ tr {
     td {
       color: white;
     }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .dashboard-title {
+    p {
+      font-family: "Permanent Marker", cursive;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 25px;
+      color: white;
+    }
+  }
+
+  .all-user-table-class {
+    // background-color: red;
+    width: 25rem;
+    height: 20rem;
+    overflow-x: auto;
   }
 }

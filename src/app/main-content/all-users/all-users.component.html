@@ -1,33 +1,34 @@
 <div class="home">
   <div class="row dashboard-title d-flex justify-content-center my-5">
-    <div class="col-11  d-flex justify-content-center">
-      <h2>Dashboard For Users</h2>
+    <div class="col d-flex justify-content-center">
+      <p>Dashboard For Users</p>
     </div>
   </div>
-  <div class="row all-user-table">
-    <p-table [value]=" users | search: searchId " #dt dataKey="id" [rows]="per_page" [showCurrentPageReport]="true"
-      [rowsPerPageOptions]="[3 , 6 , 12]" [paginator]="true"
-      currentPageReportTemplate="Showing {first} to {last} of {{total}} entries"
-      [tableStyle]="{ 'min-width': '50rem' }">
-      <ng-template pTemplate="header">
-        <tr>
-          <th>ID</th>
-          <th>Image</th>
-          <th>Name</th>
-          <th>Email</th>
-        </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-user let-expanded="expanded">
-        <tr appHighlight="#006AA0" appScale="1.01" [routerLink]="['/user-details' +'/'+ user.id]">
-          <td>
-            {{user.id}}
-          </td>
-          <td><img [src]="user.avatar" style="width: 20%;" /></td>
-          <td>{{ user.first_name}}{{' '}}{{user.last_name}}</td>
-          <td>{{ user.email}}</td>
+  <div class="row all-user-table ">
+    <div class="col all-user-table-class d-flex justify-content-center align-items-center">
+      <p-table [value]=" users | search: searchId " #dt dataKey="id" [rows]="per_page" [showCurrentPageReport]="true"
+        [rowsPerPageOptions]="[3 , 6 , 12]" [paginator]="true"
+        currentPageReportTemplate="Showing {first} to {last} of {{total}} entries" [tableStyle]="{ 'width': '50rem' }">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>ID</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-user let-expanded="expanded">
+          <tr appHighlight="#006AA0" appScale="1.01" [routerLink]="['/user-details' +'/'+ user.id]">
+            <td>
+              {{user.id}}
+            </td>
+            <td><img [src]="user.avatar" style="width: 20%;" /></td>
+            <td>{{ user.first_name}}{{' '}}{{user.last_name}}</td>
+            <td>{{ user.email}}</td>
 
-        </tr>
-      </ng-template>
-    </p-table>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
   </div>
 </div>
