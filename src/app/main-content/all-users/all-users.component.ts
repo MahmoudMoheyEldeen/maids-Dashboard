@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/interfaces/user';
 import { UserServiceService } from 'src/app/services/user-service.service';
+import { User } from 'src/app/interfaces/user';
+import { SearchService } from 'src/app/services/search.service';
 
 @Component({
   selector: 'app-all-users',
@@ -8,21 +9,24 @@ import { UserServiceService } from 'src/app/services/user-service.service';
   styleUrls: ['./all-users.component.scss'],
 })
 export class AllUsersComponent implements OnInit {
-  constructor(private _allUserServices: UserServiceService) {}
+  users: User[] = [];
+  searchId: number = 0;
+
+  constructor(
+    private _allUserServices: UserServiceService,
+    private searchService: SearchService
+  ) {}
 
   ngOnInit(): void {
-    this.getAllUser();
+    this.getAllUsers();
+    this.searchService.getSearchId().subscribe((id) => {
+      this.searchId = id;
+    });
   }
-  users: User[] = [];
 
-  getAllUser() {
+  getAllUsers() {
     this._allUserServices.getAllUsers().subscribe({
       next: (resp) => {
-        // resp.data.map((x: any) => {
-        //   this.user = x;
-        //   this.users.push(this.user);
-        // });
-        // console.log(this.users);
         this.users = resp.data;
       },
       error: (err) => {

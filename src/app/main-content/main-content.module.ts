@@ -8,9 +8,10 @@ import { UserServiceService } from '../services/user-service.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TabViewModule } from 'primeng/tabview';
 import { TableModule } from 'primeng/table';
+import { SearchPipe } from '../search.pipe';
 
 @NgModule({
-  declarations: [AllUsersComponent, UserDetailsComponent],
+  declarations: [AllUsersComponent, UserDetailsComponent, SearchPipe],
   imports: [
     CommonModule,
     MainContentRoutingModule,
