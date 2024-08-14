@@ -38,11 +38,8 @@ th {
 }
 
 tr {
-  transition: all .18s ease-in-out;
 
   &:hover {
-    transform: scale(1.008);
-    background-color: #006AA0;
     cursor: pointer;
 
     td {

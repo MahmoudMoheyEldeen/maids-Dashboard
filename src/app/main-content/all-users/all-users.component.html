@@ -18,7 +18,7 @@
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-user let-expanded="expanded">
-        <tr [routerLink]="['/user-details' +'/'+ user.id]">
+        <tr appHighlight="#006AA0" appScale="1.01" [routerLink]="['/user-details' +'/'+ user.id]">
           <td>
             {{user.id}}
           </td>

@@ -11,6 +11,7 @@ import {
 } from '@angular/common/http';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { LoadingComponent } from './shared-modules/loading/loading.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [AppComponent],

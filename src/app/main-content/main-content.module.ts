@@ -9,9 +9,15 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TabViewModule } from 'primeng/tabview';
 import { TableModule } from 'primeng/table';
 import { SearchPipe } from '../search.pipe';
+import { HighlightDirective } from '../directives/highlight.directive';
 
 @NgModule({
-  declarations: [AllUsersComponent, UserDetailsComponent, SearchPipe],
+  declarations: [
+    AllUsersComponent,
+    UserDetailsComponent,
+    SearchPipe,
+    HighlightDirective,
+  ],
   imports: [
     CommonModule,
     MainContentRoutingModule,
