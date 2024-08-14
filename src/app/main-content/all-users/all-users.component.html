@@ -4,69 +4,6 @@
       <h2>Dashboard For Users</h2>
     </div>
   </div>
-  <!-- <div class=" all-user d-flex">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner d-flex ">
-        <div class="carousel-item active ">
-          <div class="d-flex justify-content-center">
-            <div class="  col-md-9">
-              <div class="card text-center">
-                <div class="card-header">
-
-                </div>
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-md-3">
-
-                    </div>
-                    <div class="col-md-9 d-flex flex-column justify-content-center align-items-center flex-unwrap">
-
-                      <a href="#" class="btn btn-primary">More Details</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div *ngFor="let user of users" class="carousel-item">
-          <div class="d-flex justify-content-center">
-            <div class="  col-md-9">
-              <div class="card text-center">
-                <div class="card-header">
-                  <h4>ID : {{user.id}}</h4>
-                </div>
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-md-3">
-                      <img [src]="user.avatar" alt="">
-                    </div>
-                    <div class="col-md-9 d-flex flex-column justify-content-center align-items-center flex-unwrap">
-                      <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
-                      <p class="card-text">{{user.email}}</p>
-                      <a [routerLink]="['/user-details' +'/'+ user.id]" class="btn btn-primary">More Details</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div> -->
-
-
   <div class="row all-user-table">
     <p-table [value]=" users | search: searchId " #dt dataKey="id" [rows]="6" [showCurrentPageReport]="true"
       [rowsPerPageOptions]="[6]" [paginator]="true"
